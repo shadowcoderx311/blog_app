@@ -8,10 +8,10 @@
     
     <div class="form-group">
       <div class="control-label col-md-3">
-        <% f.label :email %>
+        <%= f.label :email, id: "Email" %>
       </div>
       <div class="col-md-9">
-        <%= f.email_field :email, class: 'form-control',
+        <%= f.email_field :email, id: "Email", class: 'form-control',
         autofocus: true %>
       </div>
     </div>
