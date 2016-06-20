@@ -6,7 +6,6 @@ gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass', '~>3.3.6'
 gem 'autoprefixer-rails', '~>6.3.6.2'
-gem 'sqlite3'
 gem 'devise', '~>4.1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -39,6 +38,7 @@ group :development, :test do
   gem 'rspec-rails', '3.4.2'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -55,3 +55,7 @@ group :test do
   gem 'capybara', '2.7.1'
 end
 
+group :production do
+  gem 'pg', '0.18.4'
+  gem 'rails_12factor', '0.0.3'
+end
